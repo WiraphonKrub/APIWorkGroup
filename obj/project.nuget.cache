@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "jKkgjKp46hBByou/v2L4/6LueUTkgz9KQIt3ce26dGF799WewYweeiAuJwMfGX6Ja+Uk07cmX0yEoro8/xGYpw==",
+  "dgSpecHash": "DvHR0EltHjJVnh1wEVQh574MPdd0Yirl7n20RLf2HuGm9DdSfYESI6MBKEQ1jCMzyYVBCA6aF7D/VIV3oNtqMg==",
   "success": true,
   "projectFilePath": "/Volumes/DataStore/Project Dev/APIWorkGroup/APIWorkGroup.csproj",
   "expectedPackageFiles": [
+    "/Users/wiraphon/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/wiraphon/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/wiraphon/.nuget/packages/microsoft.aspnetcore.openapi/7.0.4/microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
+    "/Users/wiraphon/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/wiraphon/.nuget/packages/microsoft.entityframeworkcore/7.0.5/microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "/Users/wiraphon/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.5/microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "/Users/wiraphon/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.5/microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",

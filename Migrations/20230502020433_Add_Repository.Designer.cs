@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIWorkGroup.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230502014023_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230502020433_Add_Repository")]
+    partial class Add_Repository
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace APIWorkGroup.Migrations
                 .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("APIStore.Model.Admin_TB", b =>
+            modelBuilder.Entity("APIWorkGroup.Models.Admin_TB", b =>
                 {
                     b.Property<int>("Admin_id")
                         .ValueGeneratedOnAdd()
