@@ -1,7 +1,7 @@
-namespace APIStore.Model;
+namespace APIWorkGroup.Models;
 
 using Microsoft.EntityFrameworkCore;
-using APIStore.Model;
+using APIWorkGroup.Models;
 
 
 public class DataContext : DbContext

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace APIStore.Model
+namespace APIWorkGroup.Models
 {
 
     public class Admin_TB
