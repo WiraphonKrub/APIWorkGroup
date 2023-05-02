@@ -21,8 +21,8 @@ namespace APIWorkGroup.Models
 
         // -------------- Foreign Key ----------------
 
-        public int Admin_typeid { get; set; }
-        public int Admin_statusid { get; set; }
+        public int Type_id { get; set; }
+        public int Status_id { get; set; }
 
         // -------------- Foreign Key ----------------
     }
