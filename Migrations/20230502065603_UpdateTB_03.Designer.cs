@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIWorkGroup.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230502014023_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230502065603_UpdateTB_03")]
+    partial class UpdateTB_03
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace APIWorkGroup.Migrations
                 .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("APIStore.Model.Admin_TB", b =>
+            modelBuilder.Entity("APIWorkGroup.Models.Admin_TB", b =>
                 {
                     b.Property<int>("Admin_id")
                         .ValueGeneratedOnAdd()
@@ -39,18 +39,46 @@ namespace APIWorkGroup.Migrations
                     b.Property<string>("Admin_password")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Admin_statusid")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Admin_typeid")
-                        .HasColumnType("int");
-
                     b.Property<string>("Admin_username")
                         .HasColumnType("longtext");
+
+                    b.Property<int>("Status_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type_id")
+                        .HasColumnType("int");
 
                     b.HasKey("Admin_id");
 
                     b.ToTable("admin_TBs");
+                });
+
+            modelBuilder.Entity("APIWorkGroup.Models.Status_TB", b =>
+                {
+                    b.Property<int>("Status_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status_name")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Status_id");
+
+                    b.ToTable("status_TBs");
+                });
+
+            modelBuilder.Entity("APIWorkGroup.Models.Type_TB", b =>
+                {
+                    b.Property<int>("Type_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type_name")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Type_id");
+
+                    b.ToTable("type_TBs");
                 });
 #pragma warning restore 612, 618
         }

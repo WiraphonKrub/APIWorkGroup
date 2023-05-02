@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace APIWorkGroup.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class UpdateTB_01 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,8 +30,8 @@ namespace APIWorkGroup.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Admin_address = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Admin_typeid = table.Column<int>(type: "int", nullable: false),
-                    Admin_statusid = table.Column<int>(type: "int", nullable: false)
+                    Type_id = table.Column<int>(type: "int", nullable: false),
+                    Status_id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIWorkGroup.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230502020433_Add_Repository")]
-    partial class Add_Repository
+    [Migration("20230502065350_UpdateTB_01")]
+    partial class UpdateTB_01
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,14 +39,14 @@ namespace APIWorkGroup.Migrations
                     b.Property<string>("Admin_password")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Admin_statusid")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Admin_typeid")
-                        .HasColumnType("int");
-
                     b.Property<string>("Admin_username")
                         .HasColumnType("longtext");
+
+                    b.Property<int>("Status_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type_id")
+                        .HasColumnType("int");
 
                     b.HasKey("Admin_id");
 

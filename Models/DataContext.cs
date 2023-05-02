@@ -19,6 +19,8 @@ namespace APIWorkGroup.Models
         }
 
         public DbSet<Admin_TB> admin_TBs { get; set; }
+        public DbSet<Status_TB> status_TBs { get; set; }
+        public DbSet<Type_TB> type_TBs { get; set; }
     }
 
 }
