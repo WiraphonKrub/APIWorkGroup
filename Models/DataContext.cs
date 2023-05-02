@@ -1,25 +1,24 @@
-namespace APIWorkGroup.Models;
-
 using Microsoft.EntityFrameworkCore;
 using APIWorkGroup.Models;
-
-
-public class DataContext : DbContext
+namespace APIWorkGroup.Models
 {
-    protected readonly IConfiguration Configuration;
-
-    public DataContext(IConfiguration configuration)
+    public class DataContext : DbContext
     {
-        Configuration = configuration;
+        protected readonly IConfiguration Configuration;
+
+        public DataContext(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            // connect to mysql with connection string from app settings
+            var connectionString = Configuration.GetConnectionString("WebApiDatabase");
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        }
+
+        public DbSet<Admin_TB> admin_TBs { get; set; }
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-    {
-        // connect to mysql with connection string from app settings
-        var connectionString = Configuration.GetConnectionString("WebApiDatabase");
-        options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-    }
-
-    public DbSet<Admin_TB> admin_TBs { get; set; }
 }
-
